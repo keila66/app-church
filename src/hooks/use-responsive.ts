@@ -3,7 +3,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 // ----------------------------------------------------------------------
 
-export function useResponsive(query, start, end) {
+export function useResponsive(query: any, start: any, end?: any) {
   const theme = useTheme();
 
   const mediaUp = useMediaQuery(theme.breakpoints.up(start));
@@ -37,7 +37,7 @@ export function useWidth() {
   const keys = [...theme.breakpoints.keys].reverse();
 
   return (
-    keys.reduce((output, key) => {
+    keys.reduce((output: any, key: any) => {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       const matches = useMediaQuery(theme.breakpoints.up(key));
 

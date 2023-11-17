@@ -18,13 +18,25 @@ export const grey = {
 };
 
 export const primary = {
-  lighter: '#D0ECFE',
-  light: '#73BAFB',
-  main: '#1877F2',
-  dark: '#0C44AE',
-  darker: '#042174',
+  lighter: '#d1dbe4',
+  light: '#a3b7ca',
+  main: '#476f95',
+  dark: '#2d4f6d',
+  darker: '#122F45',
   contrastText: '#FFFFFF',
 };
+
+// <span class=comment>/* List */</span>
+// d1dbe4, a3b7ca, 7593af, 476f95, 3a5f81, 2d4f6d, 122F45
+// #d1dbe4, #a3b7ca, #7593af, #476f95, #3a5f81, #2d4f6d, #122F45
+
+// <span class=comment>/* Comma Seperated */</span>
+// d1dbe4,a3b7ca,7593af,476f95,3a5f81,2d4f6d,122F45
+// #d1dbe4,#a3b7ca,#7593af,#476f95,#3a5f81,#2d4f6d,#122F45
+
+// <span class=comment>/* Array */</span>
+// ["d1dbe4","a3b7ca","7593af","476f95","3a5f81","2d4f6d","122F45"]
+// ["#d1dbe4","#a3b7ca","#7593af","#476f95","#3a5f81","#2d4f6d","#122F45"]
 
 export const secondary = {
   lighter: '#EFD6FF',
@@ -106,7 +118,7 @@ export function palette() {
     ...base,
     mode: 'light',
     text: {
-      primary: grey[800],
+      primary: base.primary.darker,
       secondary: grey[600],
       disabled: grey[500],
     },

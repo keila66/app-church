@@ -4,28 +4,28 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
+// import Button from '@mui/material/Button';
+// import Avatar from '@mui/material/Avatar';
 import { alpha } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import ListItemButton from '@mui/material/ListItemButton';
 
-import { usePathname } from 'src/routes/hooks';
-import { RouterLink } from 'src/routes/components';
+import { usePathname } from '../../routes/hooks';
+// import { RouterLink } from '../../routes/components';
 
-import { useResponsive } from 'src/hooks/use-responsive';
+import { useResponsive } from '../../hooks/use-responsive';
 
-import { account } from 'src/_mock/account';
+// import { account } from '../../_mock/account';
 
-import Logo from 'src/components/logo';
-import Scrollbar from 'src/components/scrollbar';
+import Logo from '../../components/logo';
+import Scrollbar from '../../components/scrollbar';
 
 import { NAV } from './config-layout';
 import navConfig from './config-navigation';
 
 // ----------------------------------------------------------------------
 
-export default function Nav({ openNav, onCloseNav }) {
+export default function Nav({ openNav, onCloseNav }: any) {
   const pathname = usePathname();
 
   const upLg = useResponsive('up', 'lg');
@@ -47,10 +47,10 @@ export default function Nav({ openNav, onCloseNav }) {
         display: 'flex',
         borderRadius: 1.5,
         alignItems: 'center',
-        bgcolor: (theme) => alpha(theme.palette.grey[500], 0.12),
+        // bgcolor: (theme) => alpha(theme.palette.grey[500], 0.12),
       }}
     >
-      <Avatar src={account.photoURL} alt="photoURL" />
+      {/* <Avatar src={account.photoURL} alt="photoURL" />
 
       <Box sx={{ ml: 2 }}>
         <Typography variant="subtitle2">{account.displayName}</Typography>
@@ -58,7 +58,7 @@ export default function Nav({ openNav, onCloseNav }) {
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {account.role}
         </Typography>
-      </Box>
+      </Box> */}
     </Box>
   );
 
@@ -72,7 +72,7 @@ export default function Nav({ openNav, onCloseNav }) {
 
   const renderUpgrade = (
     <Box sx={{ px: 2.5, pb: 3, mt: 10 }}>
-      <Stack alignItems="center" spacing={3} sx={{ pt: 5, borderRadius: 2, position: 'relative' }}>
+      {/* <Stack alignItems="center" spacing={3} sx={{ pt: 5, borderRadius: 2, position: 'relative' }}>
         <Box
           component="img"
           src="/assets/illustrations/illustration_avatar.png"
@@ -95,7 +95,7 @@ export default function Nav({ openNav, onCloseNav }) {
         >
           Upgrade to Pro
         </Button>
-      </Stack>
+      </Stack> */}
     </Box>
   );
 
@@ -164,14 +164,14 @@ Nav.propTypes = {
 
 // ----------------------------------------------------------------------
 
-function NavItem({ item }) {
+function NavItem({ item }: any) {
   const pathname = usePathname();
 
   const active = item.path === pathname;
 
   return (
     <ListItemButton
-      component={RouterLink}
+      // component={RouterLink}
       href={item.path}
       sx={{
         minHeight: 44,
